@@ -13,7 +13,7 @@ from ai import AI
 class Weather():
 
     # The location of where you want the forecast for
-    __location = "Bolton, GB"
+    __location = "Ambala, IN"
 
     # API Key
     api_key = "90be93527babd2a823f16c364325e6d1"
@@ -57,8 +57,8 @@ class Weather():
         detail_status = forecast.forecast_daily[0].detailed_status
         pressure = str(forecast.forecast_daily[0].pressure.get('press'))
         humidity = str(forecast.forecast_daily[0].humidity)
-        sunrise = datetime.utcfromtimestamp(forecast.forecast_daily[0].sunrise_time()).strftime("%H:%M:%S")
-        sunset = datetime.utcfromtimestamp(forecast.forecast_daily[0].sunset_time()).strftime("%H:%M:%S")
+        # sunrise = datetime.utcfromtimestamp(forecast.forecast_daily[0].sunrise_time()).strftime("%H:%M:%S")
+        # sunset = datetime.utcfromtimestamp(forecast.forecast_daily[0].sunset_time()).strftime("%H:%M:%S")
         temperature = str(forecast.forecast_daily[0].temperature('celsius').get('day'))
         uvi = forecast.forecast_daily[0].uvi
 
@@ -74,9 +74,9 @@ class Weather():
                 + ", humidity of " + humidity + " percent" \
                 + " and a pressure of " + pressure + " millibars" \
                 + ". The temperature is " + temperature + "degrees " \
-                + ". Sunrise was at " + sunrise \
-                + " and sunset is at " + sunset \
                 + ". " + self.uv_index(uvi)
+                # + ". Sunrise was at " + sunrise \
+                # + " and sunset is at " + sunset \
 
         # print(message)
         return message

@@ -7,6 +7,7 @@ from eventhook import Event_hook
 
 shiwi = AI()
 
+
 # Setup events for plugins to attach to
 shiwi.start = Event_hook()
 shiwi.stop = Event_hook()
@@ -34,8 +35,7 @@ plugins = [plugin_factory.create(item) for item in plugin_data["items"]]
 
 # Register all the plugins
 for item in plugins:
-    item.register(shiwi
-                  )
+    item.register(shiwi)
 
 shiwi.start.trigger()
 

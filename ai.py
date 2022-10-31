@@ -74,9 +74,9 @@ class AI():
         #         return phrase   
         
         # except:
-        print(f"Oops!, Can't hear that.")
+        #     print(f"Oops!, Can't hear that.")
         phrase = input("Please type the command: ")
             
         return phrase
             
-        return None
+        # return None
